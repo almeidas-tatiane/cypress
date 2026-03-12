@@ -1,0 +1,12 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "E2E Ecommerce Testing",
+  "main": "index.js",
+  "repository": "https://github.com/almeidas-tatiane/cypress.git",
+  "author": "almeidas-tatiane <almeidas.tatiane@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "12.2.0"
+  }
+}
