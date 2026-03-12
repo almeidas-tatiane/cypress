@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('LoginValido', () => {
+Cypress.Commands.add('ValidLogin', () => {
       cy.visit('https://practice.qabrains.com/ecommerce')
       cy.contains('.text-xl', 'Login')
       cy.get('#email')
