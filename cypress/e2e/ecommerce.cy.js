@@ -32,7 +32,7 @@ describe('ecommerce', () => {
     })
 
 
-    it.only('OrderByProducts', () => {
+    it('OrderByProducts', () => {
       cy.ValidLogin()
       cy.ValidateProductsPage()
       cy.contains('p', 'Order by')
@@ -96,13 +96,36 @@ describe('ecommerce', () => {
         .should('be.visible')
         .should('have.text', 'A to Z (Ascending)')
         .click()
-
-
-
-
-
     })
-  })
+    })
+
+    context('Cart', () => {
+      it.only('AddProductToCart', () => {
+        cy.ValidLogin()
+        cy.contains('a.text-lg', 'Sample Shirt Name')
+        cy.get('.products > :nth-child(1) > .flex > .border')
+          .should('be.visible')
+          .should('have.text', 'Add to cart')
+          .click()
+        cy.contains('.bg-qa-clr', 1)
+          .should('be.visible')
+          .should('have.text', 1)
+          .click()
+        cy.contains('h3','Your Cart')
+          .should('be.visible')
+          .should('have.text','Your Cart')
+        cy.contains('.border', 1)
+          .should('be.visible')
+          .should('have.text',1)
+        cy.get('.mt-3 > .font-bold')
+          .should('be.visible')
+          .should('have.text','Sample Shirt Name')
+        
+
+
+      })
+    })
+
 
 
 })
