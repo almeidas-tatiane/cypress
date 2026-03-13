@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "name": "Sample Shirt Name" },
+    { "name": "Sample Shoe Name" },
+    { "name": "Sample Jacket Name" },
+    { "name": "Sample Trouser Name" },
+    { "name": "Sample T-Shirt Name" },
+    { "name": "Sample Sunglass Name" }
+  ]
+}
