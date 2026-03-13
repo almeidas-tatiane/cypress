@@ -2,6 +2,7 @@
 
 
 describe('ecommerce', () => {
+
   context('Login', () => {
     it('ValidLogin', () => {
       cy.ValidLogin()
@@ -97,35 +98,29 @@ describe('ecommerce', () => {
         .should('have.text', 'A to Z (Ascending)')
         .click()
     })
+  })
+
+  context('Cart', () => {
+    it('AddProductToCart', () => {
+      cy.AddProductToCart()
     })
 
-    context('Cart', () => {
-      it.only('AddProductToCart', () => {
-        cy.ValidLogin()
-        cy.contains('a.text-lg', 'Sample Shirt Name')
-        cy.get('.products > :nth-child(1) > .flex > .border')
-          .should('be.visible')
-          .should('have.text', 'Add to cart')
-          .click()
-        cy.contains('.bg-qa-clr', 1)
-          .should('be.visible')
-          .should('have.text', 1)
-          .click()
-        cy.contains('h3','Your Cart')
-          .should('be.visible')
-          .should('have.text','Your Cart')
-        cy.contains('.border', 1)
-          .should('be.visible')
-          .should('have.text',1)
-        cy.get('.mt-3 > .font-bold')
-          .should('be.visible')
-          .should('have.text','Sample Shirt Name')
-        
+
+    it.only('RemoveProductFromCart', () => {
+      cy.AddProductToCart()
+      cy.contains('h3.font-bold', 'Sample Shirt Name')
+        .should('be.visible')
+      cy.contains('button', 'Remove')
+        .click()
+      cy.contains('button', 'Remove')
+        .click()
+      cy.contains('text-2xl', 'Your cart is empty.')
 
 
-      })
     })
 
 
 
+  })
 })
+
