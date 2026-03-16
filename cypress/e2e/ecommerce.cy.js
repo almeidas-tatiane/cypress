@@ -145,24 +145,43 @@ describe('ecommerce', () => {
 
     })
 
+    it.only('UpdateProductFromCart', () => {
+      cy.AddProductsToCart()
+      cy.get('.bg-qa-clr')
+        .should('be.visible')
+        .click()
+      cy.contains('h3.font-bold', 'Sample Shoe Name')
+        .should('be.visible')
+        .parents('[class*="border"]')
+        .within(() => {
+          cy.contains('button', '+')
+            .click()
+        })
+      cy.contains('.border', '2')
+        .should('be.visible')
+    })
+
+
   })
 
-  context('Logout', () => {
-    it('Logout', () => {
-      cy.ValidLogin()
-      cy.get('.user-name')
-        .should('be.visible')
-        .should('have.text', 'test@qabrains.com')
-      cy.get('span.caret')
-        .click()
-      cy.get('.text-red-500')
-        .click()
-      cy.contains('button', 'Logout')
-        .click()
-      cy.contains('button', 'Login')
-        .should('be.visible')
-        .should('have.text', 'Login')
-    })
+})
+
+context('Logout', () => {
+  it('Logout', () => {
+    cy.ValidLogin()
+    cy.get('.user-name')
+      .should('be.visible')
+      .should('have.text', 'test@qabrains.com')
+    cy.get('span.caret')
+      .click()
+    cy.get('.text-red-500')
+      .click()
+    cy.contains('button', 'Logout')
+      .click()
+    cy.contains('button', 'Login')
+      .should('be.visible')
+      .should('have.text', 'Login')
   })
 })
+
 
