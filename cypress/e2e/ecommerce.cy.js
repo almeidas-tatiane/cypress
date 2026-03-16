@@ -6,7 +6,35 @@ describe('ecommerce', () => {
   context('Login', () => {
     it('ValidLogin', () => {
       cy.ValidLogin()
-    }) 
+    })
+
+    it('InvalidLogin_CorrectUsername_InvalidPassword', () => {
+      cy.visit('https://practice.qabrains.com/ecommerce')
+      cy.get('#email')
+        .type('test@qabrains.com')
+      cy.get('#password')
+        .type('123456')
+      cy.contains('button', 'Login')
+        .click()
+      cy.contains('Password is incorrect')
+        .should('be.visible')
+      cy.contains('Username matched but password is incorrect.')
+        .should('be.visible')
+    })
+
+    it('InvalidLogin_IncorrectUsername_ValidPassword', () => {
+      cy.visit('https://practice.qabrains.com/ecommerce')
+      cy.get('#email')
+        .type('test123@qabrains.com')
+      cy.get('#password')
+        .type('Password123')
+      cy.contains('button', 'Login')
+        .click()
+      cy.contains('Username is incorrect')
+        .should('be.visible')
+      cy.contains('Password matched but email is incorrect.')
+        .should('be.visible')
+    })
   })
 
   context('Products', () => {
@@ -120,7 +148,7 @@ describe('ecommerce', () => {
   })
 
   context('Logout', () => {
-     it('Logout', () => {
+    it('Logout', () => {
       cy.ValidLogin()
       cy.get('.user-name')
         .should('be.visible')
