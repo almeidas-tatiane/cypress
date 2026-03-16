@@ -145,7 +145,7 @@ describe('ecommerce', () => {
 
     })
 
-    it.only('UpdateProductFromCart', () => {
+    it('UpdateProductFromCart', () => {
       cy.AddProductsToCart()
       cy.get('.bg-qa-clr')
         .should('be.visible')
