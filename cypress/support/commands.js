@@ -65,28 +65,19 @@ Cypress.Commands.add('AddProductToCart', () => {
     .should('have.text', product.name)
 })
 
-Cypress.Commands.add('AddProductToCart', () => {
+Cypress.Commands.add('AddProductsToCart', () => {
   cy.fixture('products').then((data) => {
-    const product = data.products[0]
-
     cy.ValidLogin()
-    cy.contains('a.text-lg', product.name)
-    cy.get('.products > :nth-child(1) > .flex > .border')
-      .should('be.visible')
-      .should('have.text', 'Add to cart')
-      .click()
-    cy.contains('.bg-qa-clr', 1)
-      .should('be.visible')
-      .should('have.text', 1)
-      .click()
-    cy.contains('h3', 'Your Cart')
-      .should('be.visible')
-      .should('have.text', 'Your Cart')
-    cy.contains('.border', 1)
-      .should('be.visible')
-      .should('have.text', 1)
-    cy.get('.mt-3 > .font-bold')
-      .should('be.visible')
-      .should('have.text', product.name)
+    data.products.forEach((product) => {
+      cy.contains('a.text-lg', product.name)
+        .should('be.visible')
+        .parentsUntil('.products')
+        .parent()
+        .within(() => {
+          cy.contains('button', 'Add to cart')
+            .should('be.visible')
+            .click()
+        })
+    })
   })
 })
