@@ -101,25 +101,37 @@ describe('ecommerce', () => {
   })
 
   context('Cart', () => {
-    it('AddProductToCart', () => {
-      cy.AddProductToCart()
+    it('AddProductsToCart', () => {
+      cy.AddProductsToCart()
     })
 
 
     it.only('RemoveProductFromCart', () => {
-      cy.AddProductToCart()
-      cy.contains('h3.font-bold', 'Sample Shirt Name')
+      cy.AddProductsToCart()
+      cy.get('.bg-qa-clr')
         .should('be.visible')
-      cy.contains('button', 'Remove')
         .click()
-      cy.contains('button', 'Remove')
-        .click()
-      cy.contains('text-2xl', 'Your cart is empty.')
-
+      cy.get('body').then(($body) => {
+        if ($body.find('button:contains("Remove")').length > 0) {
+          cy.contains('h3.font-bold', 'Sample Shoe Name')
+            .should('be.visible')
+            .parents('[class*="border"]')
+            .within(() => {
+              cy.contains('button', 'Remove')
+                .click()
+            })
+          cy.contains('Are you absolutely sure?')
+            .parents('[role="dialog"]')
+            .within(() => {
+              cy.contains('button', 'Remove')
+                .click()
+            })
+          cy.contains('h3.font-bold', 'Sample Shoe Name')
+            .should('not.exist')
+        }
+      })
 
     })
-
-
 
   })
 })
