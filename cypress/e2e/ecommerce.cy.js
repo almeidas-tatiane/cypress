@@ -168,6 +168,28 @@ describe('ecommerce', () => {
     it('CheckoutOverview', () => {
       cy.CheckoutOverview()
     })
+
+    it.only('CompleteCheckout', () => {
+      cy.CheckoutOverview()
+      cy.contains('.form-label','Email')
+        .should('be.visible')
+      cy.contains('.form-label','First Name')
+        .should('be.visible')
+      cy.get('input[placeholder="Ex. John"]')
+        .click()
+        .type('Tatiane')
+      cy.contains('.form-label','Last Name')
+        .should('be.visible')
+      cy.get('input[placeholder="Ex. Doe"]')
+        .click()
+        .type('Almeida')
+      
+          
+
+
+    
+      
+    })
   })
 
 })
