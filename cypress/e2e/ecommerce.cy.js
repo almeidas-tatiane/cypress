@@ -165,8 +165,9 @@ describe('ecommerce', () => {
   })
 
   context('Checkout', () => {
-    cy.CheckoutOverview()
-   
+    it('CheckoutOverview', () => {
+      cy.CheckoutOverview()
+    })
   })
 
 })
