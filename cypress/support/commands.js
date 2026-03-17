@@ -81,3 +81,18 @@ Cypress.Commands.add('AddProductsToCart', () => {
     })
   })
 })
+
+Cypress.Commands.add('CheckoutOverview', () => {
+   it('CheckoutOverview', () => {
+      cy.AddProductsToCart()
+      cy.get('.bg-qa-clr')
+        .should('be.visible')
+        .click()
+      cy.contains('Checkout')
+        .click()
+        .should('have.text', 'Checkout')
+      cy.contains('Checkout: Your Information')
+        .should('be.visible')
+        .should('have.text', 'Checkout: Your Information')
+    })
+})
