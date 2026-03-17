@@ -164,6 +164,11 @@ describe('ecommerce', () => {
 
   })
 
+  context('Checkout', () => {
+    cy.CheckoutOverview()
+   
+  })
+
 })
 
 context('Logout', () => {
