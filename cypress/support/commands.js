@@ -48,7 +48,7 @@ Cypress.Commands.add('ValidateProductsPage', () => {
 Cypress.Commands.add('AddProductsToCart', () => {
   cy.fixture('products').then((data) => {
     cy.ValidLogin()
-    data.products.forEach((product) => {
+    cy.wrap(data.products).each((product) => {
       cy.contains('a.text-lg', product.name)
         .should('be.visible')
         .parentsUntil('.products')
