@@ -15,7 +15,7 @@ Although my primary expertise is in **Performance Testing**, this project demons
 ## 🚀 Tech Stack
 
 * **Cypress** – End-to-end test automation
-* **JavaScript (ES6)** – Test logic
+* **JavaScript** – Test logic
 * **Fixtures (JSON)** – Test data management
 * **Custom Commands** – Reusability and cleaner tests
 
