@@ -7,6 +7,8 @@
   "author": "almeidas-tatiane <almeidas.tatiane@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "2.28.1",
+    "allure-commandline": "^2.38.1",
     "cypress": "12.2.0"
   }
 }
