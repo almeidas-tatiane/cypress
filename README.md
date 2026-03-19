@@ -25,6 +25,7 @@ Although my primary expertise is in **Performance Testing**, this project demons
 ```bash
 npm install
 npx cypress open
+```
 ---
 
 ## 🧪 Test Scenarios Covered
