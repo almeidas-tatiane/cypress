@@ -171,45 +171,101 @@ describe('ecommerce', () => {
 
     it.only('CompleteCheckout', () => {
       cy.CheckoutOverview()
-      cy.contains('.form-label','Email')
+      cy.contains('.form-label', 'Email')
         .should('be.visible')
-      cy.contains('.form-label','First Name')
+      cy.contains('.form-label', 'First Name')
         .should('be.visible')
       cy.get('input[placeholder="Ex. John"]')
         .click()
         .type('Tatiane')
-      cy.contains('.form-label','Last Name')
+      cy.contains('.form-label', 'Last Name')
         .should('be.visible')
       cy.get('input[placeholder="Ex. Doe"]')
         .click()
         .type('Almeida')
-      
-          
+      cy.get('input[value="1207"]')
+        .click()
+        .clear()
+        .type('1234')
+      cy.contains('button', 'Continue')
+        .should('be.visible')
+        .click()
+      cy.contains('.text-xl', 'Checkout: Overview')
+        .should('be.visible')
 
+      let totalGeral = 0
 
-    
-      
+      cy.get('h3.font-bold').each(($el) => {
+
+        cy.wrap($el)
+          .parents('[class*="border"]')
+          .first()
+          .within(() => {
+
+            cy.get('.text-lg').last().invoke('text').then((texto) => {
+
+              const valor = Number(texto.replace(/[^\d.]/g, ''))
+              totalGeral += valor
+
+            })
+
+          })
+
+      }).then(() => {
+
+        cy.contains('Item Total')
+          .invoke('text')
+          .then((texto) => {
+
+            const totalTela = Number(texto.replace(/[^\d.]/g, ''))
+
+            expect(totalTela).to.equal(totalGeral)
+
+          })
+
+      })
+
+      cy.contains('button', 'Finish')
+        .should('be.visible')
+        .click()
+
+      cy.contains('.text-lg', 'Thank you for your order!')
+        .should('be.visible')
+
+      cy.contains('.text-xl', 'Checkout: Complete!')
+        .should('be.visible')
+
+      cy.contains('button', 'Continue Shopping')
+        .should('be.visible')
+        .click()
+
+      cy.contains('.text-xl', 'Products')
+        .should('be.visible')
+
+    }) // close it('CompleteCheckout')
+
+  }) // close context Checkout
+
+  context('Logout', () => {
+    it('Logout', () => {
+      cy.ValidLogin()
+      cy.get('.user-name')
+        .should('be.visible')
+        .should('have.text', 'test@qabrains.com')
+      cy.get('span.caret')
+        .click()
+      cy.get('.text-red-500')
+        .click()
+      cy.contains('button', 'Logout')
+        .click()
+      cy.contains('button', 'Login')
+        .should('be.visible')
+        .should('have.text', 'Login')
     })
   })
 
-})
+}) // close describe ecommerce
 
-context('Logout', () => {
-  it('Logout', () => {
-    cy.ValidLogin()
-    cy.get('.user-name')
-      .should('be.visible')
-      .should('have.text', 'test@qabrains.com')
-    cy.get('span.caret')
-      .click()
-    cy.get('.text-red-500')
-      .click()
-    cy.contains('button', 'Logout')
-      .click()
-    cy.contains('button', 'Login')
-      .should('be.visible')
-      .should('have.text', 'Login')
-  })
-})
+
 
 
