@@ -169,7 +169,7 @@ describe('ecommerce', () => {
       cy.CheckoutOverview()
     })
 
-    it.only('CompleteCheckout', () => {
+    it('CompleteCheckout', () => {
       cy.CheckoutOverview()
       cy.contains('.form-label', 'Email')
         .should('be.visible')
