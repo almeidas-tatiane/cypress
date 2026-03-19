@@ -10,6 +10,8 @@ The main goal is to validate critical user flows such as login, product selectio
 
 Although my primary expertise is in **Performance Testing**, this project demonstrates my ability to design and implement **functional automation tests** to support modern QA requirements.
 
+This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills.
+
 ---
 
 ## 🚀 Tech Stack
@@ -20,7 +22,7 @@ Although my primary expertise is in **Performance Testing**, this project demons
 * **Custom Commands** – Reusability and cleaner tests
 
 ---
-## ▶️ How to run in graphic interface
+## ▶️ How to run in interactive interface
 
 ```bash
 npm install
@@ -34,24 +36,23 @@ npx cypress run
 ---
 ## 📊 Allure Report
 
-This project supports Allure Reports for better test result visualization.
-Allure Reports provide a clear and interactive visualization of test execution results, helping identify failures and analyze test behavior more efficiently.
+This project supports **Allure Reports** for enhanced test result analysis.
+
+They provide a clear and interactive way to visualize execution results, helping identify failures and understand test behavior more efficiently.
 
 ## ▶️ Run tests with Allure enabled
-```
+```bash
 npx cypress run --env allure=true
 ```
 ## ▶️ Generate report
-```
+```bash
 allure generate allure-results --clean -o allure-report
 ```
 ## ▶️ Open report
-```
+```bash
 allure open allure-report
 ```
-
-
-
+-----
 ## 🧪 Test Scenarios Covered
 
 ### 🔐 Login
