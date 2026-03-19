@@ -20,14 +20,37 @@ Although my primary expertise is in **Performance Testing**, this project demons
 * **Custom Commands** – Reusability and cleaner tests
 
 ---
-## ▶️ How to run
+## ▶️ How to run in graphic interface
 
 ```bash
 npm install
 npx cypress open
+```
+---
+## ▶️ Run in headless mode
+```bash
 npx cypress run
 ```
 ---
+## 📊 Allure Report
+
+This project supports Allure Reports for better test result visualization.
+Allure Reports provide a clear and interactive visualization of test execution results, helping identify failures and analyze test behavior more efficiently.
+
+## ▶️ Run tests with Allure enabled
+```
+npx cypress run --env allure=true
+```
+## ▶️ Generate report
+```
+allure generate allure-results --clean -o allure-report
+```
+## ▶️ Open report
+```
+allure open allure-report
+```
+
+
 
 ## 🧪 Test Scenarios Covered
 
