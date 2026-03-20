@@ -20,19 +20,29 @@ This project also reflects the growing industry expectation for QA professionals
 * **JavaScript** – Test logic
 * **Fixtures (JSON)** – Test data management
 * **Custom Commands** – Reusability and cleaner tests
-
+* **GitHub Actions** – CI/CD pipeline
+* **Cypress Cloud** – Test execution and reporting
+  
 ---
-## ▶️ How to run in interactive interface
+## ▶️ Run Tests (Interactive Mode)
 
 ```bash
 npm install
 npx cypress open
 ```
 ---
-## ▶️ Run in headless mode
+## ▶️ Run Tests (Headless Mode)
 ```bash
 npx cypress run
 ```
+---
+## ⚙️ CI/CD Pipeline
+
+This project includes a GitHub Actions workflow that:
+
+* Supports manual execution via workflow_dispatch (on-demand test runs)
+* Integrates with Cypress Cloud for test execution and reporting
+
 ---
 ## 📊 Allure Report
 
@@ -138,7 +148,7 @@ This ensures consistency between UI and business logic.
 * Selectors could be improved with **data-testid attributes** for better stability
 * Test coverage can be expanded with:
   * Negative checkout scenarios
-* CI/CD integration (GitHub Actions) is planned
+* CI/CD pipeline can be enhanced with additional validations (e.g., parallel execution, environment strategies)
 
 ---
 
