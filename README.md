@@ -159,4 +159,6 @@ QA Engineer with strong experience in:
 
 Currently expanding skills in **test automation** to deliver more complete quality solutions.
 
+⭐ If this project helped you, consider giving it a star!
+
 ---
