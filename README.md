@@ -143,15 +143,6 @@ This ensures consistency between UI and business logic.
 
 ---
 
-## ⚠️ Notes & Improvements
-
-* Selectors could be improved with **data-testid attributes** for better stability
-* Test coverage can be expanded with:
-  * Negative checkout scenarios
-* CI/CD pipeline can be enhanced with additional validations (e.g., parallel execution, environment strategies)
-
----
-
 ## 🎯 Purpose
 
 This project is part of my continuous learning journey to expand my skills beyond performance testing into **functional automation**, aligning with current market expectations.
