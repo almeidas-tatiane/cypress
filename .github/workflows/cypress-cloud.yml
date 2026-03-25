@@ -28,6 +28,7 @@ jobs:
         run: |
           npx cypress run \
           --browser ${{ matrix.browser }} \
+          --record \
           --key $CYPRESS_RECORD_KEY \
           --group "UI - ${{ matrix.browser }}" \
           --spec "${{ github.event.inputs.spec }}"
