@@ -158,6 +158,7 @@ QA Engineer with strong experience in:
 * Process improvement and test strategy
 
 Currently expanding skills in **test automation** to deliver more complete quality solutions.
+
 ---
 
 ## 🙏 Usage and Credit Notice
