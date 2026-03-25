@@ -29,7 +29,6 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }} 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
   cypress-e2e-chrome:
-    needs: cypress-e2e-eletron
     runs-on: ubuntu-latest
     container: 
       image: cypress/included:cypress-13.11.0-node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
@@ -50,7 +49,6 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }} 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   cypress-e2e-firefox:
-    needs: cypress-e2e-chrome
     runs-on: ubuntu-latest
     container: 
       image: cypress/included:cypress-13.11.0-node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
