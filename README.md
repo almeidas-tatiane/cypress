@@ -100,6 +100,8 @@ These tools complement each other to provide a complete testing observability st
 ---
 ## 📸 Test Execution Evidence
 
+Provides a centralized view of test results across all browsers executed in CI.
+
 ### 🔹 Cypress Cloud (Execution Dashboard)
 <img width="944" height="884" alt="image" src="https://github.com/user-attachments/assets/6e52968a-8221-42a3-9673-068a310e815d" />
 <img width="1573" height="573" alt="image" src="https://github.com/user-attachments/assets/e730f4b3-45ae-47e5-b1b3-e118879b2331" />
