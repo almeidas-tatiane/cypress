@@ -282,6 +282,11 @@ This ensures consistency between UI and business logic.
 - Trade-offs between browser support and stability must be considered in CI environments
 
 ---
+## 🚀 Next Steps
+
+- Automated execution on PRs
+
+---
 
 ## 👩‍💻 About Me
 
