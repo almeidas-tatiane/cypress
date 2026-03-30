@@ -52,6 +52,6 @@ jobs:
         run: yarn install
 
       - name: Run E2E tests
-        run: node runner_chrome.js
+        run: node runner_firefox.js
     env: 
       TARGET_TOKEN_FIREFOX: ${{  secrets.TARGET_TOKEN_FIREFOX  }}
