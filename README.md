@@ -1,16 +1,30 @@
+![Cypress](https://img.shields.io/badge/Cypress-Testing-brightgreen)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
 # 🛒 E-commerce Test Automation (Cypress)
 
 🔗 Application under test: https://practice.qabrains.com/ecommerce
 
 ## 📌 Overview
 
-This project contains automated end-to-end tests for an e-commerce application using **Cypress**.
+This project demonstrates a production-like E2E testing pipeline using Cypress, including multi-browser execution, **CI/CD integration, and external reporting**.
 
-The main goal is to validate critical user flows such as login, product selection, cart management, and checkout process, ensuring system reliability and correctness.
+Although my primary expertise is in **Performance Testing**, this project highlights my ability to design scalable functional automation aligned with modern QA practices.
 
-Although my primary expertise is in **Performance Testing**, this project demonstrates my ability to design and implement **functional automation tests** to support modern QA requirements.
+This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills and demonstrates a complete E2E testing pipeline using Cypress, focusing on:
 
-This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills.
+- Multi-browser execution (Electron, Chrome, Firefox)
+- CI/CD integration using GitHub Actions
+- Parallel execution strategy
+- External reporting using Tesults
+- Real-world troubleshooting (Firefox limitations in CI)
+
+---
+## 🎯 Why this project?
+
+This project was created to simulate a real-world QA pipeline, combining automation, CI/CD, and reporting tools.
+
+It reflects practical challenges such as browser compatibility, CI limitations, and test result analysis.
 
 ---
 
@@ -22,7 +36,80 @@ This project also reflects the growing industry expectation for QA professionals
 * **Custom Commands** – Reusability and cleaner tests
 * **GitHub Actions** – CI/CD pipeline
 * **Cypress Cloud** – Test execution and reporting
+* **Tesults** – External test reporting
+* **Allure Reports** – Detailed test visualization
+
+---
+## ⚙️ CI Pipeline
+
+The pipeline is structured into independent jobs:
+
+- Electron execution
+- Chrome execution
+- Firefox execution
+
+Each browser runs as an independent job, enabling scalable and **parallel** test execution across environments.
   
+---
+## 🌐 Multi-Browser Strategy
+
+| Browser   | Execution | Video | Notes |
+|----------|--------|------|------|
+| Electron | ✅ | ✅ | Default Cypress engine |
+| Chrome   | ✅ | ✅ | Stable and fully supported |
+| Firefox  | ✅ | ❌ | Video recording not supported by Cypress |
+
+
+---
+## ⚠️ Known Limitations
+
+- Cypress does not support video recording for Firefox due to lack of CDP support
+- Firefox execution in CI may require Cypress version compatibility adjustments
+- **Firefox execution is included** to validate cross-browser compatibility, despite known limitations in Cypress regarding video recording.
+
+---
+## 📊 Reporting
+
+Test results are published using Tesults:
+
+- Centralized execution results
+- Historical tracking
+- Cross-browser comparison
+
+Additionally, Allure Reports are available for detailed analysis and visualization of test execution.
+
+---
+## 🔍 Reporting Tools Comparison
+
+This project uses multiple reporting tools, each serving a different purpose:
+
+| Tool            | Purpose |
+|-----------------|--------|
+| Cypress Cloud   | Test execution dashboard and real-time monitoring |
+| Tesults         | Centralized reporting across CI runs and browsers |
+| Allure Reports  | Detailed test analysis and visualization |
+
+### 💡 Key Differences
+
+- **Cypress Cloud** → Focused on execution visibility and debugging
+- **Tesults** → Focused on centralized result tracking and history
+- **Allure** → Focused on deep analysis and readable test reports
+
+These tools complement each other to provide a complete testing observability strategy.
+
+---
+## 📸 Test Execution Evidence
+
+### 🔹 Cypress Cloud (Execution Dashboard)
+![Cypress Cloud](./docs/cypress-cloud.png)
+
+### 🔹 Tesults Report (Cross-browser results)
+![Tesults](./docs/tesults.png)
+
+### 🔹 Allure Report (Detailed analysis)
+<img width="1585" height="512" alt="image" src="https://github.com/user-attachments/assets/4c5049ff-66e3-41d8-b4d3-ef9c8a334375" />
+
+
 ---
 ## ▶️ Run Tests (Interactive Mode)
 
@@ -35,14 +122,6 @@ npx cypress open
 ```bash
 npx cypress run
 ```
----
-## ⚙️ CI/CD Pipeline
-
-This project includes a GitHub Actions workflow that:
-
-* Supports manual execution via workflow_dispatch (on-demand test runs)
-* Integrates with Cypress Cloud for test execution and reporting
-
 ---
 ## 📊 Allure Report
 
@@ -143,9 +222,13 @@ This ensures consistency between UI and business logic.
 
 ---
 
-## 🎯 Purpose
+## 💡 Lessons Learned
 
-This project is part of my continuous learning journey to expand my skills beyond performance testing into **functional automation**, aligning with current market expectations.
+- Cypress version compatibility directly impacts browser stability
+- Firefox execution in CI environments is more sensitive than Chrome
+- Docker + Cypress + Firefox requires careful configuration
+- Parallel execution improves feedback time in CI pipelines
+- Trade-offs between browser support and stability must be considered in CI environments
 
 ---
 
@@ -157,10 +240,14 @@ QA Engineer with strong experience in:
 * Monitoring (Grafana, Dynatrace, DataDog, New Relic)
 * Process improvement and test strategy
 
-Currently expanding skills in **test automation** to deliver more complete quality solutions.
+Currently expanding skills in test automation to deliver end-to-end quality strategies combining **performance** and **functional testing**.
 
 ---
+## 🚀 Final Thoughts
 
+This project demonstrates how a QA engineer can go beyond test automation by designing a complete testing pipeline, handling real-world challenges such as browser limitations, CI/CD constraints, and reporting strategies.
+
+---
 ## 🙏 Usage and Credit Notice
 
 If you find this project useful, feel free to use it and adapt it.
