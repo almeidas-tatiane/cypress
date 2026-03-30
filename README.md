@@ -4,13 +4,19 @@
 
 ## 📌 Overview
 
-This project contains automated end-to-end tests for an e-commerce application using **Cypress**.
+This project contains automated end-to-end tests for an e-commerce application using **Cypress E2E Testing Pipeline**.
 
-The main goal is to validate critical user flows such as login, product selection, cart management, and checkout process, ensuring system reliability and correctness.
+End-to-end test automation project using Cypress with multi-browser execution (Electron, Chrome, Firefox) integrated into a CI pipeline using GitHub Actions and Tesults reporting.
 
 Although my primary expertise is in **Performance Testing**, this project demonstrates my ability to design and implement **functional automation tests** to support modern QA requirements.
 
-This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills.
+This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills and demonstrates a complete E2E testing pipeline using Cypress, focusing on:
+
+- Multi-browser execution (Electron, Chrome, Firefox)
+- CI/CD integration using GitHub Actions
+- Parallel execution strategy
+- External reporting using Tesults
+- Real-world troubleshooting (Firefox limitations in CI)
 
 ---
 
@@ -22,7 +28,43 @@ This project also reflects the growing industry expectation for QA professionals
 * **Custom Commands** – Reusability and cleaner tests
 * **GitHub Actions** – CI/CD pipeline
 * **Cypress Cloud** – Test execution and reporting
+* **Tesults** – Test reporting
+
+---
+## ⚙️ CI Pipeline
+
+The pipeline is structured into independent jobs:
+
+- Electron execution
+- Chrome execution
+- Firefox execution
+
+Each browser runs tests independently and reports results to Tesults.
   
+---
+## 🌐 Multi-Browser Strategy
+
+| Browser   | Execution | Video | Notes |
+|----------|--------|------|------|
+| Electron | ✅ | ✅ | Default Cypress engine |
+| Chrome   | ✅ | ✅ | Stable and fully supported |
+| Firefox  | ✅ | ❌ | Video recording not supported by Cypress |
+
+---
+## ⚠️ Known Limitations
+
+- Cypress does not support video recording for Firefox due to lack of CDP support
+- Firefox execution in CI may require Cypress version compatibility adjustments
+
+---
+## 📊 Reporting
+
+Test results are published using Tesults:
+
+- Centralized execution results
+- Historical tracking
+- Cross-browser comparison
+
 ---
 ## ▶️ Run Tests (Interactive Mode)
 
@@ -35,16 +77,7 @@ npx cypress open
 ```bash
 npx cypress run
 ```
----
-## ⚙️ CI/CD Pipeline
-
-This project includes a GitHub Actions workflow that:
-
-* Supports manual execution via workflow_dispatch (on-demand test runs)
-* Integrates with Cypress Cloud for test execution and reporting
-
----
-## 📊 Allure Report
+---## 📊 Allure Report
 
 This project supports **Allure Reports** for enhanced test result analysis.
 
@@ -143,9 +176,12 @@ This ensures consistency between UI and business logic.
 
 ---
 
-## 🎯 Purpose
+## 💡 Lessons Learned
 
-This project is part of my continuous learning journey to expand my skills beyond performance testing into **functional automation**, aligning with current market expectations.
+- Cypress version compatibility directly impacts browser stability
+- Firefox execution in CI environments is more sensitive than Chrome
+- Docker + Cypress + Firefox requires careful configuration
+- Parallel execution improves feedback time in CI pipelines
 
 ---
 
