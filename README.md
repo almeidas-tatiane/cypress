@@ -53,13 +53,7 @@ Each browser runs as an independent job, enabling scalable and **parallel** test
 
 This project uses manual triggers (`workflow_dispatch`) to execute test pipelines.
 
-GitHub Actions
-   ↓
-Parallel Jobs
-   ↓
-Electron | Chrome | Firefox
-   ↓
-Tesults / Cypress Cloud / Allure
+<img width="327" height="186" alt="image" src="https://github.com/user-attachments/assets/315c133b-1375-4c54-943b-78ce82e34405" />
 
 
 ### ☁️ Cypress Cloud
