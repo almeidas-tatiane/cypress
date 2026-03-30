@@ -8,7 +8,7 @@ jobs:
   cypress-electron-tests:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/browsers:node18.16.0-chrome114-ff115
+      image: cypress/browsers:node20.9.0-chrome118-ff117
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -26,7 +26,7 @@ jobs:
     needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container: 
-      image: cypress/browsers:node18.16.0-chrome114-ff115
+      image: cypress/browsers:node20.9.0-chrome118-ff117
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -44,7 +44,7 @@ jobs:
     needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container: 
-      image: cypress/browsers:node18.16.0-chrome114-ff115
+      image: cypress/browsers:node20.9.0-chrome118-ff117
     steps:
       - name: Get Code - Checkout
         uses: actions/checkout@v6.0.2
