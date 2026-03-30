@@ -51,14 +51,32 @@ The pipeline is structured into independent jobs:
 Each browser runs as an independent job, enabling scalable and **parallel** test execution across environments.
   
 ---
-## How to Run in GitHub Actions
+## ▶️ Trigger CI Execution (GitHub Actions)
 
-- Click on Actions
-- In All workflows section, click the desired workflow:
-- **Cypress Cloud** - To display the results on **Cypress Cloud**
-- **Cypress Tests** - To display the results on **Tesults**
+This project uses manual triggers (`workflow_dispatch`) to execute test pipelines.
 
-- Click on Run workflow -> Run workflow button
+### 🔹 Cypress Cloud
+
+1. Go to **GitHub → Actions**
+2. Select workflow: `Cypress Cloud`
+3. Click **Run workflow**
+4. Select branch and confirm execution
+
+This workflow:
+- Executes tests in Cypress Cloud
+- Provides real-time execution dashboard and debugging insights
+
+---
+
+### 🔹 Cypress Tests (Tesults Reporting)
+
+1. Go to **GitHub → Actions**
+2. Select workflow: `Cypress Tests`
+3. Click **Run workflow**
+
+This workflow:
+- Executes tests in parallel across browsers (Electron, Chrome, Firefox)
+- Publishes results to Tesults for centralized reporting
 
 ---
 ## 🌐 Multi-Browser Strategy
