@@ -5,6 +5,16 @@
 
 🔗 Application under test: https://practice.qabrains.com/ecommerce
 
+## 📑 Table of Contents
+
+- [📌 Overview](#-overview)
+- [⚙️ CI Pipeline](#️-ci-pipeline)
+- [📊 Reporting](#-reporting)
+- [📸 Test Execution Evidence](#-test-execution-evidence)
+- [▶️ Run Tests](#️-run-tests-interactive-mode)
+- [🧪 Test Scenarios Covered](#-test-scenarios-covered)
+
+
 ## 📌 Overview
 
 This project demonstrates a production-like E2E testing pipeline using Cypress, including multi-browser execution, **CI/CD integration, and external reporting**.
