@@ -107,7 +107,8 @@ These tools complement each other to provide a complete testing observability st
 ![Tesults](./docs/tesults.png)
 
 ### 🔹 Allure Report (Detailed analysis)
-![Allure](./docs/allure.png)
+<img width="1585" height="512" alt="image" src="https://github.com/user-attachments/assets/4c5049ff-66e3-41d8-b4d3-ef9c8a334375" />
+
 
 ---
 ## ▶️ Run Tests (Interactive Mode)
