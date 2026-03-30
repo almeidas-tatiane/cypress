@@ -98,6 +98,18 @@ This project uses multiple reporting tools, each serving a different purpose:
 These tools complement each other to provide a complete testing observability strategy.
 
 ---
+## 📸 Test Execution Evidence
+
+### 🔹 Cypress Cloud (Execution Dashboard)
+![Cypress Cloud](./docs/cypress-cloud.png)
+
+### 🔹 Tesults Report (Cross-browser results)
+![Tesults](./docs/tesults.png)
+
+### 🔹 Allure Report (Detailed analysis)
+![Allure](./docs/allure.png)
+
+---
 ## ▶️ Run Tests (Interactive Mode)
 
 ```bash
