@@ -13,11 +13,9 @@ Although my primary expertise is in **Performance Testing**, this project highli
 
 This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills and demonstrates a complete E2E testing pipeline using Cypress, focusing on:
 
-- Multi-browser execution (Electron, Chrome, Firefox)
-- CI/CD integration using GitHub Actions
-- Parallel execution strategy
-- External reporting using Tesults
-- Real-world troubleshooting (Firefox limitations in CI)
+- Parallel multi-browser execution using GitHub Actions
+- Integration with multiple reporting tools (Cypress Cloud, Tesults, Allure)
+- CI troubleshooting and browser compatibility handling (Firefox)
 
 ---
 ## 🎯 Why this project?
