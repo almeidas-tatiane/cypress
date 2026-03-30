@@ -55,7 +55,7 @@ Each browser runs as an independent job, enabling scalable and **parallel** test
 
 This project uses manual triggers (`workflow_dispatch`) to execute test pipelines.
 
-### 🔹 Cypress Cloud
+### ☁️ Cypress Cloud
 
 1. Go to **GitHub → Actions**
 2. Select workflow: `Cypress Cloud`
@@ -66,9 +66,8 @@ This workflow:
 - Executes tests in Cypress Cloud
 - Provides real-time execution dashboard and debugging insights
 
----
 
-### 🔹 Cypress Tests (Tesults Reporting)
+### ⚙️ Cypress Tests (Tesults Reporting)
 
 1. Go to **GitHub → Actions**
 2. Select workflow: `Cypress Tests`
