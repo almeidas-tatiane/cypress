@@ -8,7 +8,7 @@ jobs:
   cypress-electron-tests:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-15.13.0-node-24.14.1-chrome-146.0.7680.164-1-ff-149.0-edge-146.0.3856.72-1
+      image: cypress/browsers:node18.16.0-chrome114-ff115
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -23,9 +23,10 @@ jobs:
       TARGET_TOKEN_ELECTRON: ${{  secrets.TARGET_TOKEN_ELECTRON  }}
 
   cypress-chrome-tests:
+    needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-15.13.0-node-24.14.1-chrome-146.0.7680.164-1-ff-149.0-edge-146.0.3856.72-1
+      image: cypress/browsers:node18.16.0-chrome114-ff115
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -40,9 +41,10 @@ jobs:
       TARGET_TOKEN_CHROME: ${{  secrets.TARGET_TOKEN_CHROME  }}
 
   cypress-firefox-tests:
+    needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-15.13.0-node-24.14.1-chrome-146.0.7680.164-1-ff-149.0-edge-146.0.3856.72-1
+      image: cypress/browsers:node18.16.0-chrome114-ff115
     steps:
       - name: Get Code - Checkout
         uses: actions/checkout@v6.0.2
