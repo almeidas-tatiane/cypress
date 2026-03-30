@@ -136,7 +136,7 @@ Provides a centralized view of test results across all browsers executed in CI.
 <img width="1573" height="573" alt="image" src="https://github.com/user-attachments/assets/e730f4b3-45ae-47e5-b1b3-e118879b2331" />
 
 
-### 🌐 Tesults Report (Cross-browser results)
+### ⚙️ Tesults Report (Cross-browser results)
 
 <img width="661" height="229" alt="image" src="https://github.com/user-attachments/assets/f152e7a6-2914-4351-97f0-e53d83391de7" />
 <img width="1597" height="581" alt="image" src="https://github.com/user-attachments/assets/e912e61a-21cf-456b-9725-70d8d67a32fb" />
