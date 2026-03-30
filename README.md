@@ -101,15 +101,17 @@ These tools complement each other to provide a complete testing observability st
 ## 📸 Test Execution Evidence
 
 ### 🔹 Cypress Cloud (Execution Dashboard)
-
 <img width="944" height="884" alt="image" src="https://github.com/user-attachments/assets/6e52968a-8221-42a3-9673-068a310e815d" />
-
-
 <img width="1573" height="573" alt="image" src="https://github.com/user-attachments/assets/e730f4b3-45ae-47e5-b1b3-e118879b2331" />
 
 
 ### 🔹 Tesults Report (Cross-browser results)
-![Tesults](./docs/tesults.png)
+<img width="661" height="229" alt="image" src="https://github.com/user-attachments/assets/f152e7a6-2914-4351-97f0-e53d83391de7" />
+<img width="1597" height="581" alt="image" src="https://github.com/user-attachments/assets/e912e61a-21cf-456b-9725-70d8d67a32fb" />
+<img width="1450" height="370" alt="image" src="https://github.com/user-attachments/assets/a098a5da-3e27-44fa-875d-82df7472b636" />
+<img width="1453" height="378" alt="image" src="https://github.com/user-attachments/assets/81e41c84-4cb4-4759-b043-d2fc6bd35342" />
+<img width="1452" height="366" alt="image" src="https://github.com/user-attachments/assets/832aefa9-5968-4fa4-b2fe-d7b314774f4e" />
+
 
 ### 🔹 Allure Report (Detailed analysis)
 <img width="1585" height="512" alt="image" src="https://github.com/user-attachments/assets/4c5049ff-66e3-41d8-b4d3-ef9c8a334375" />
