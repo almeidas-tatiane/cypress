@@ -11,7 +11,7 @@ jobs:
   cypress-e2e-eletron:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-13.11.0-node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
+      image: cypress/included:15.13.0
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -31,7 +31,7 @@ jobs:
   cypress-e2e-chrome:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-13.11.0-node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
+      image: cypress/included:15.13.0
       options: --user 1001
     steps:
       - name: Get Code - Checkout
@@ -51,7 +51,7 @@ jobs:
   cypress-e2e-firefox:
     runs-on: ubuntu-latest
     container: 
-      image: cypress/included:cypress-13.11.0-node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
+      image: cypress/included:15.13.0
       options: --user 1001
     steps:
       - name: Get Code - Checkout
