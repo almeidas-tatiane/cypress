@@ -1,14 +1,15 @@
+![Cypress](https://img.shields.io/badge/Cypress-Testing-brightgreen)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
 # 🛒 E-commerce Test Automation (Cypress)
 
 🔗 Application under test: https://practice.qabrains.com/ecommerce
 
 ## 📌 Overview
 
-This project contains automated end-to-end tests for an e-commerce application using **Cypress E2E Testing Pipeline**.
+This project demonstrates a production-like E2E testing pipeline using Cypress, including multi-browser execution, **CI/CD integration, and external reporting**.
 
-End-to-end test automation project using Cypress with multi-browser execution (Electron, Chrome, Firefox) integrated into a CI pipeline using GitHub Actions and Tesults reporting.
-
-Although my primary expertise is in **Performance Testing**, this project demonstrates my ability to design and implement **functional automation tests** to support modern QA requirements.
+Although my primary expertise is in **Performance Testing**, this project highlights my ability to design scalable functional automation aligned with modern QA practices.
 
 This project also reflects the growing industry expectation for QA professionals to combine performance and functional automation skills and demonstrates a complete E2E testing pipeline using Cypress, focusing on:
 
@@ -28,7 +29,8 @@ This project also reflects the growing industry expectation for QA professionals
 * **Custom Commands** – Reusability and cleaner tests
 * **GitHub Actions** – CI/CD pipeline
 * **Cypress Cloud** – Test execution and reporting
-* **Tesults** – Test reporting
+* **Tesults** – External test reporting
+* **Allure Reports** – Detailed test visualization
 
 ---
 ## ⚙️ CI Pipeline
@@ -77,7 +79,8 @@ npx cypress open
 ```bash
 npx cypress run
 ```
----## 📊 Allure Report
+---
+## 📊 Allure Report
 
 This project supports **Allure Reports** for enhanced test result analysis.
 
