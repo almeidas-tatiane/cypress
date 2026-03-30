@@ -103,11 +103,14 @@ These tools complement each other to provide a complete testing observability st
 Provides a centralized view of test results across all browsers executed in CI.
 
 ### 🔹 Cypress Cloud (Execution Dashboard)
+
+<img width="930" height="591" alt="image" src="https://github.com/user-attachments/assets/6e4faeea-68a0-484e-8148-9ff771eec3ba" />
 <img width="944" height="884" alt="image" src="https://github.com/user-attachments/assets/6e52968a-8221-42a3-9673-068a310e815d" />
 <img width="1573" height="573" alt="image" src="https://github.com/user-attachments/assets/e730f4b3-45ae-47e5-b1b3-e118879b2331" />
 
 
 ### 🔹 Tesults Report (Cross-browser results)
+
 <img width="661" height="229" alt="image" src="https://github.com/user-attachments/assets/f152e7a6-2914-4351-97f0-e53d83391de7" />
 <img width="1597" height="581" alt="image" src="https://github.com/user-attachments/assets/e912e61a-21cf-456b-9725-70d8d67a32fb" />
 <img width="1450" height="370" alt="image" src="https://github.com/user-attachments/assets/a098a5da-3e27-44fa-875d-82df7472b636" />
@@ -116,6 +119,7 @@ Provides a centralized view of test results across all browsers executed in CI.
 
 
 ### 🔹 Allure Report (Detailed analysis)
+
 <img width="1585" height="512" alt="image" src="https://github.com/user-attachments/assets/4c5049ff-66e3-41d8-b4d3-ef9c8a334375" />
 
 
