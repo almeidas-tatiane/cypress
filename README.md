@@ -13,8 +13,6 @@
 - [📸 Test Execution Evidence](#-test-execution-evidence)
 - [▶️ Run Tests](#️-run-tests-interactive-mode)
 - [🧪 Test Scenarios Covered](#-test-scenarios-covered)
-- [🚀 Next Steps](#-next-steps)
-
 
 ## 📌 Overview
 
@@ -62,7 +60,9 @@ Each browser runs as an independent job, enabling scalable and **parallel** test
 ---
 ## ▶️ Trigger CI Execution (GitHub Actions)
 
-This project uses manual triggers (`workflow_dispatch`) to execute test pipelines.
+This project supports both **manual** and **automated** triggers via GitHub Actions.
+
+Workflows can be executed manually using `workflow_dispatch` or automatically on `push` and `pull_request` events (for CI validation).
 
 <img width="327" height="186" alt="image" src="https://github.com/user-attachments/assets/315c133b-1375-4c54-943b-78ce82e34405" />
 
@@ -77,6 +77,7 @@ This project uses manual triggers (`workflow_dispatch`) to execute test pipeline
 This workflow:
 - Executes tests in Cypress Cloud
 - Provides real-time execution dashboard and debugging insights
+- Supports execution on both manual triggers and CI events (push and pull requests)
 
 
 ### ⚙️ Cypress Tests (Tesults Reporting)
@@ -88,6 +89,7 @@ This workflow:
 This workflow:
 - Executes tests in parallel across browsers (Electron, Chrome, Firefox)
 - Publishes results to Tesults for centralized reporting
+- Supports execution on both manual triggers and CI events (push and pull requests)
 
 ---
 ## 🌐 Multi-Browser Strategy
@@ -283,12 +285,6 @@ This ensures consistency between UI and business logic.
 - Trade-offs between browser support and stability must be considered in CI environments
 
 ---
-## 🚀 Next Steps
-
-- Automated execution on PRs
-
----
-
 ## 👩‍💻 About Me
 
 QA Engineer with strong experience in:
