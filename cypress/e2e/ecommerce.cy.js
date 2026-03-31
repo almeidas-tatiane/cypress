@@ -8,7 +8,7 @@ describe('ecommerce', () => {
       cy.ValidLogin()
     })
 
-    it('InvalidLogin_CorrectUsername_InvalidPassword', () => {
+    it('Login should fail with correct username and invalid password', () => {
       cy.visit('https://practice.qabrains.com/ecommerce')
       cy.get('#email')
         .type('test@qabrains.com')
