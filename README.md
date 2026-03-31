@@ -1,4 +1,5 @@
-![Cypress](https://img.shields.io/badge/Cypress-Testing-brightgreen)
+![Cypress Cloud](https://github.com/almeidas-tatiane/cypress/actions/workflows/cypress-cloud.yml/badge.svg)
+![Cypress Tests](https://github.com/almeidas-tatiane/cypress/actions/workflows/cypress-tests.yml/badge.svg)
 ![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 # 🛒 E-commerce Test Automation (Cypress)
