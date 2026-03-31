@@ -22,7 +22,7 @@ describe('ecommerce', () => {
         .should('be.visible')
     })
 
-    it('InvalidLogin_IncorrectUsername_ValidPassword', () => {
+    it('Login should fail with incorrect username and valid password', () => {
       cy.visit('https://practice.qabrains.com/ecommerce')
       cy.get('#email')
         .type('test123@qabrains.com')
